@@ -23,6 +23,8 @@ import org.junit.Test;
 
 /**
  * Created by sun on 2015/8/2.
+ * 
+ * new other line for test
  */
 public class JGitTest{
 	//此目录下需要有.git目录
