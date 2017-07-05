@@ -22,6 +22,7 @@ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.junit.Test;
 
 /**
+ * ADD SOME　ＴＥＳＴ ＴＥＸＴ
  * Created by sun on 2015/8/2.
  */
 public class JGitTest{
