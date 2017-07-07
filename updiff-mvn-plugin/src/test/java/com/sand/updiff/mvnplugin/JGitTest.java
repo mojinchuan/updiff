@@ -31,7 +31,7 @@ import org.junit.Test;
  */
 public class JGitTest{
 	//此目录下需要有.git目录
-	static final String PROJECT_PATH="e:/workspaces/workspaceTest/updiff/";
+	static final String PROJECT_PATH="D:/workspaces/ttfWorkspace/sumpay-admin/";
 
 	@Test
 	public void test_call() throws IOException, GitAPIException {
@@ -53,7 +53,7 @@ public class JGitTest{
 		newTreeIterator.reset(reader, newTree);
 
 		CanonicalTreeParser oldTreeIterator = new CanonicalTreeParser();
-		ObjectId oldTree = git.getRepository().resolve("6525ef3^{tree}");
+		ObjectId oldTree = git.getRepository().resolve("479bebb^{tree}");
 		oldTreeIterator.reset(reader, oldTree);
 
 		List<DiffEntry> diffs = git.diff()
@@ -90,7 +90,8 @@ public class JGitTest{
 	              FileInputStream(PROJECT_PATH+files.get(i));
 	            origin = new 
 	              BufferedInputStream(fi, BUFFER);
-	            String filePath=files.get(i).replace("/target/", "/WEB-INF/");
+	            String filePath=files.get(i).replace("/target/", "/WEB-INF/")
+	            		.replace("/src/main/webapp/", "/");
 	            
 	            ZipEntry entry = new ZipEntry(filePath);
 	            out.putNextEntry(entry);
